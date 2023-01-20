@@ -19,16 +19,17 @@ function convertToRoman(num) {
  //    }
  //  }
  //  return roman;
-
+var roman='';
 if (num === 0) {
 return '';
   }
   for (var i = 0; i < obj.length; i++) {
     if (num >= obj[i][0]) {
-      return obj[i][1] + convertToRoman(num - obj[i][0]);
+      roman= obj[i][1] + convertToRoman(num - obj[i][0]);
+		
     }
   }
-
+return roman;
 
 }
 // You can test your code by running the above function and printing it to console by pressing the run button at the top. To run it with input 36, uncomment the following line
