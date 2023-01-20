@@ -9,30 +9,21 @@ function convertToRoman(num) {
       6:['I', 1]
     };
 
-  //your code here
-  // var lookup = {M:1000,CM:900,D:500,CD:400,C:100,XC:90,L:50,XL:40,X:10,IX:9,V:5,IV:4,I:1},roman = '',i;
-  var roman = '',i;
-	for (i in Object.keys(obj)) {
-    while ( num >= obj[i] ) {
-      roman += obj[i];
-      num -= obj[i];
-    }
+  let i = 0;
+  let result = "";
+  
+  while(num > 0) {
+      for(;num < obj[i].first; i++);
+      let roman = obj[i].second;
+      let number = obj[i].first; 
+      let count = (num / number);
+      
+      for(let j = 0; j < count; j++)
+          result += roman;
+      num = num - count * number;
   }
-  return roman;
-
-	
-// var roman='';
-// if (num === 0) {
-// return '';
-//   }
-//   for (let i in obj.length) {
-//     if (num >= obj[i][0]) {
-//       roman+= obj[i][1] + convertToRoman(num - obj[i][0]);
-		
-//     }
-//   }
-// return roman;
-
+  
+  return result;
 
 }
 // You can test your code by running the above function and printing it to console by pressing the run button at the top. To run it with input 36, uncomment the following line
