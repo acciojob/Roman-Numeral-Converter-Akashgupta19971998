@@ -9,11 +9,11 @@ function convertToRoman(num) {
       6:['I', 1]
     };
 
-  your code here
+ // your code here
     var roman = '',i;
 	for (i in Object.keys(obj)) {
     while ( num >= obj[i] ) {
-      roman += obj[i];
+      roman +=i;
       num -= obj[i];
     }
   }
