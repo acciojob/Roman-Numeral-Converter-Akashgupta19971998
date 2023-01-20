@@ -9,21 +9,17 @@ function convertToRoman(num) {
       6:['I', 1]
     };
 
-  let i = 0;
-  let result = "";
-  
-  while(num > 0) {
-      for(;num < obj[i].first; i++);
-      let roman = obj[i].second;
-      let number = obj[i].first; 
-      let count = (num / number);
-      
-      for(let j = 0; j < count; j++)
-          result += roman;
-      num = num - count * number;
+  your code here
+    var roman = '',i;
+	for (i in Object.keys(obj)) {
+    while ( num >= obj[i] ) {
+      roman += obj[i];
+      num -= obj[i];
+    }
   }
-  
-  return result;
+  return roman;
+
+
 
 }
 // You can test your code by running the above function and printing it to console by pressing the run button at the top. To run it with input 36, uncomment the following line
