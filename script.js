@@ -10,26 +10,33 @@ function convertToRoman(num) {
     };
 
  // your code here
- //    var roman = '',i;
-	// for (i in obj) {
- //    while ( num >= obj[i] ) {
- //      roman +=i;
- //      num -= obj[i];
- //    }
- //  }
- //  return roman;
-	var roman = '';
-  for (var key in obj) {
-    if (num == obj[key]) {
-      return roman +=key;
-    }
-    var check = num > obj[key];
-    if(check) {
-      roman = roman + key.repeat(parseInt(num/obj[key]));
-      num = num%obj[key];
+    var roman = '',i;
+	for (i in obj) {
+    while ( num >= obj[i] ) {
+      roman +=i;
+      num -= obj[i];
     }
   }
- return roman;
+  return roman;
+
+
+
+
+
+
+	
+	// var roman = '';
+ //  for (var key in obj) {
+ //    if (num == obj[key]) {
+ //      return roman +=key;
+ //    }
+ //    var check = num > obj[key];
+ //    if(check) {
+ //      roman = roman + key.repeat(parseInt(num/obj[key]));
+ //      num = num%obj[key];
+ //    }
+ //  }
+ // return roman;
 
 
 
