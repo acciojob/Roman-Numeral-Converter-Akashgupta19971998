@@ -21,27 +21,20 @@ function convertToRoman(num) {
  //  return roman;
 
 	
-// var roman='';
-// if (num === 0) {
-// return '';
-//   }
-//   for (var i = 0; i < obj.length; i++) {
-//     if (num >= obj[i][0]) {
-//       roman+= obj[i][1] + convertToRoman(num - obj[i][0]);
+var roman='';
+if (num === 0) {
+return '';
+  }
+  for (var i = 0; i < obj.length; i++) {
+    if (num >= obj[i][0]) {
+      roman+= obj[i][1] + convertToRoman(num - obj[i][0]);
 		
-//     }
-//   }
-// return roman;
+    }
+  }
+return roman;
 
 
-	//3rd
-  if(num < 1){ return "";}
-  if(num >= 40){ return "XL" + convert(num - 40);}
-  if(num >= 10){ return "X" + convert(num - 10);}
-  if(num >= 9){ return "IX" + convert(num - 9);}
-  if(num >= 5){ return "V" + convert(num - 5);}
-  if(num >= 4){ return "IV" + convert(num - 4);}
-  if(num >= 1){ return "I" + convert(num - 1);}
+
 
 }
 // You can test your code by running the above function and printing it to console by pressing the run button at the top. To run it with input 36, uncomment the following line
