@@ -11,7 +11,7 @@ function convertToRoman(num) {
 
  // your code here
     var roman = '',i;
-	for (i in Object.keys(obj)) {
+	for (i in obj) {
     while ( num >= obj[i] ) {
       roman +=i;
       num -= obj[i];
