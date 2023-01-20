@@ -25,7 +25,7 @@ var roman='';
 if (num === 0) {
 return '';
   }
-  for (var i = 0; i < obj.length; i++) {
+  for (let i in obj.length) {
     if (num >= obj[i][0]) {
       roman+= obj[i][1] + convertToRoman(num - obj[i][0]);
 		
